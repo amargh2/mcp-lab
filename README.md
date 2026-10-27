@@ -1,8 +1,16 @@
-# System & Network MCP Server
+# System & Network MCP Lab
 
-A lightweight, high-performance [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server built with Python and `FastMCP`. 
+A lightweight, hands-on [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server built with Python and `FastMCP`.
 
-This project explores extending Large Language Model capabilities by providing deterministic, real-time operating system and networking tools over standard JSON-RPC `stdio`. Built to understand the mechanics of agentic tool-calling, reflection, and conversational infrastructure layers.
+---
+
+### 🧭 About This Project
+
+This is a personal learning lab built to explore the nuts and bolts of the **Model Context Protocol (MCP)** and understand how it bridges language models to real-world systems. 
+
+Rather than just treating AI like a conversational chatbot, this project dives into what's happening underneath: Natural Language Interfaces (NLI), the Context Plane, and how tools, resources, and prompts actually function across the wire. 
+
+I built this in tandem with Gemini—pair-programming through the concepts, mechanics, and code step-by-step—to understand firsthand how MCP acts as an adapter and translation layer between reasoning agents and deterministic operating system/networking tools.
 
 ---
 
@@ -20,7 +28,7 @@ This project explores extending Large Language Model capabilities by providing d
 
 1. **Protocol Transport:** Runs over standard I/O (`stdio`). The AI host application spawns `server.py` as a child process and exchanges JSON-RPC 2.0 messages.
 2. **Deterministic Ground Truth:** Offloads mathematical and operational tasks from probabilistic LLMs to native C/Python execution (preventing bitwise math hallucinations).
-3. **Zero-Magic Introspection:** Leverages standard Python type annotations (`domain: str -> str`) and docstrings via reflection to automatically generate the tool parameters and semantic schemas for the LLM.
+3. **Zero-Magic Introspection:** Leverages standard Python type annotations (`domain: str -> str`) and docstrings via reflection to automatically generate tool parameters and semantic schemas for the LLM.
 
 ---
 
