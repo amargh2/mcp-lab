@@ -29,7 +29,7 @@ Very excited by the protocol, what it can do, and what it makes possible for mor
 ## 🧠 How It Works Under the Hood
 
 1. **Simple local communication (`stdio`):** The AI app runs `server.py` in the background and talks to it over standard input/output using basic JSON messages.
-2. **Letting Python do what it's good at:** Language models are great with words, but notoriously unreliable with math. Offloading subnet calculations and network queries to Python means the answers are fast, mathematically accurate, and don't waste model tokens.
+2. **Letting Python do what it's good at:** Language models are great with words and inference but mechanical, deterministic operations make more sense to offload to a function. Offloading subnet calculations and network queries to Python means the answers are fast, mathematically accurate, and don't waste model tokens.
 3. **Clean Python type hints:** FastMCP uses standard Python type hints (`domain: str`) and docstrings to automatically tell the model what each tool expects, with no complicated schemas to write by hand.
 
 ---
