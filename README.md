@@ -8,7 +8,7 @@ A lightweight, hands-on [Model Context Protocol (MCP)](https://modelcontextproto
 
 This is a personal learning lab built to explore the nuts and bolts of the **Model Context Protocol (MCP)** and understand how it bridges language models to real-world systems. 
 
-Rather than just treating AI like a conversational chatbot, this project dives into what's happening underneath: Natural Language Interfaces (NLI), the Context Plane, and how tools, resources, and prompts actually function across the wire. 
+Rather than just treating AI like a conversational chatbot, this project dives into what's happening underneath: Natural Language Interfaces (NLI), the Context Plane, and how tools, resources, and prompts actually function in code. 
 
 I built this in tandem with Gemini—pair-programming through the concepts, mechanics, and code step-by-step—to understand firsthand how MCP acts as an adapter and translation layer between reasoning agents and deterministic operating system/networking tools.
 
