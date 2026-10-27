@@ -12,6 +12,8 @@ Rather than just treating AI like a conversational chatbot, this project dives i
 
 I built this in tandem with Gemini—pair-programming through the concepts, mechanics, and code step-by-step—to understand firsthand how MCP acts as an adapter and translation layer between reasoning agents and deterministic operating system/networking tools.
 
+Very excited by the protocol, what it can do, and what it makes possible for more people.
+
 ---
 
 ## 🛠️ Included Tools
@@ -26,9 +28,9 @@ I built this in tandem with Gemini—pair-programming through the concepts, mech
 
 ## 🧠 How It Works Under the Hood
 
-1. **Protocol Transport:** Runs over standard I/O (`stdio`). The AI host application spawns `server.py` as a child process and exchanges JSON-RPC 2.0 messages.
-2. **Deterministic Ground Truth:** Offloads mathematical and operational tasks from probabilistic LLMs to native C/Python execution (preventing bitwise math hallucinations).
-3. **Zero-Magic Introspection:** Leverages standard Python type annotations (`domain: str -> str`) and docstrings via reflection to automatically generate tool parameters and semantic schemas for the LLM.
+1. **Simple local communication (`stdio`):** The AI app runs `server.py` in the background and talks to it over standard input/output using basic JSON messages.
+2. **Letting Python do what it's good at:** Language models are great with words, but notoriously unreliable with math. Offloading subnet calculations and network queries to Python means the answers are fast, mathematically accurate, and don't waste model tokens.
+3. **Clean Python type hints:** FastMCP uses standard Python type hints (`domain: str`) and docstrings to automatically tell the model what each tool expects, with no complicated schemas to write by hand.
 
 ---
 
@@ -72,10 +74,3 @@ Add this server to your AI application's `mcp_config.json` (Claude Desktop, Curs
 ```
 
 Once loaded, the AI agent will automatically detect these tools and call them conversationally whenever your prompt requires networking or system inspection.
-
----
-
-## 🔮 Roadmap
-- [ ] Ping & active port checking
-- [ ] Microsoft Graph API integration for Microsoft Intune endpoint compliance audits
-- [ ] Active Directory / Entra ID identity checks
